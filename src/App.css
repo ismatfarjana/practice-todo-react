@@ -42,6 +42,10 @@
   margin: 0 2vw;
 }
 
+.addItem {
+  margin: 1vh 0;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

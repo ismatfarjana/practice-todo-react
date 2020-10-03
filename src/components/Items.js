@@ -3,6 +3,7 @@ import axios from "axios";
 
 //import  component item
 import Item from "./Item";
+import AddItem from "./AddItem";
 
 //export component item
 export default class Items extends Component {
@@ -58,6 +59,18 @@ export default class Items extends Component {
       });
   };
 
+  handleSubmitItem = item => {
+    axios
+      .post(`https://practice-with-todo-api.herokuapp.com/addNewTodo`, {
+        completed: false,
+        task: item
+      })
+      .then(res => {
+        const updatedItems = this.state.items.concat(res.data);
+        this.setState({ items: updatedItems });
+      });
+  };
+
   renderItems = () => {
     return this.state.items.map(item => {
       return (
@@ -76,6 +89,9 @@ export default class Items extends Component {
       <div>
         <h2>Here is your TODO list</h2>
         {this.state.items.length ? this.renderItems() : <p>List is loading</p>}
+        <div className="addItem">
+          <AddItem submitItem={this.handleSubmitItem} />
+        </div>
       </div>
     );
   }
