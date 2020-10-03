@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export default class Item extends Component {
   render() {
     return (
-      <div>
+      <div className="oneItem">
         <input
           type="checkbox"
           name={this.props.item.task}
@@ -13,7 +13,10 @@ export default class Item extends Component {
         />
         <label>{this.props.item.task}</label>
 
-        <button onClick={() => this.props.deleteItem(this.props.item._id)}>
+        <button
+          className="button"
+          onClick={() => this.props.deleteItem(this.props.item._id)}
+        >
           Delete
         </button>
       </div>

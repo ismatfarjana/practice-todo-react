@@ -25,7 +25,9 @@ export default class AddItem extends Component {
           value={this.state.item}
           onChange={this.handleChange}
         />
-        <button onClick={this.handleSubmit}>Submit</button>
+        <button className="button" onClick={this.handleSubmit}>
+          Add a new todo
+        </button>
       </div>
     );
   }
