@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,8 +24,20 @@
   color: white;
 }
 
+.list {
+  margin-left: 20vw;
+  text-align: left;
+  margin-bottom: 10vh;
+}
+
 .App-link {
   color: #61dafb;
+}
+
+.social > a {
+  color: rgb(93, 93, 231);
+  text-decoration: none;
+  margin: 0 2vw;
 }
 
 @keyframes App-logo-spin {
