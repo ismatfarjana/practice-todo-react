@@ -37,14 +37,24 @@ export default class Items extends Component {
       })
       .then(res => {
         console.log(res);
-        const updatedItem = this.state.items.map(item => {
+        const updatedItems = this.state.items.map(item => {
           if (item._id === id) {
             item.completed = completed;
             item.task = task;
           }
           return item;
         });
-        this.setState({ item: updatedItem });
+        this.setState({ items: updatedItems });
+      });
+  };
+
+  handleDeleteItem = id => {
+    axios
+      .delete(`https://practice-with-todo-api.herokuapp.com/${id}/delete`)
+      .then(res => {
+        const updatedItems = this.state.items.filter(item => item._id !== id);
+        console.log(updatedItems);
+        this.setState({ items: updatedItems });
       });
   };
 
@@ -55,6 +65,7 @@ export default class Items extends Component {
           key={item._id}
           item={item}
           updateCompleted={this.handleCompleted}
+          deleteItem={this.handleDeleteItem}
         />
       );
     });
