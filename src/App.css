@@ -32,6 +32,8 @@
 
 .App-link {
   color: #61dafb;
+  font-size: 15px;
+  margin: 1vh 0;
 }
 
 .social > a {
