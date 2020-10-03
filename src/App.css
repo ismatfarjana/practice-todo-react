@@ -6,15 +6,19 @@
   height: 40vmin;
   pointer-events: none;
 }
+.leaf {
+  height: 3vh;
+  width: auto;
+}
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  .leaf {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #012419;
   min-height: 50vh;
   display: flex;
   flex-direction: column;
@@ -31,9 +35,9 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #02ac81;
   font-size: 15px;
-  margin: 1vh 0;
+  margin: 0.5vh 0;
 }
 
 .social > a {

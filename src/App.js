@@ -1,5 +1,5 @@
 import React from "react";
-// import logo from './logo.svg';
+import leaf from "./leaf.png";
 import "./App.css";
 import Items from "./components/Items";
 
@@ -8,6 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>MERN Todo List</h1>
+        <img alt="" className="leaf" src={leaf} />
         <p>This app is build by Syeda for MERN learning purpose</p>
         <a
           className="App-link"
